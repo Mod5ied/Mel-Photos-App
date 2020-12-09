@@ -1,0 +1,33 @@
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+@mixin row($direction) {
+  justify-content: $direction;
+}
+@mixin col($direction) {
+  align-items: $direction;
+}
+
+* {
+  box-sizing: border-box;
+  border: 1px solid red !important;
+}
+@media (max-width: 500px) {
+  body {
+    @include flex(column);
+
+    .nav-area {
+        @include flex(column);
+        gap: 1rem;
+        
+        #header {
+            font-size: 1rem;
+        }
+        div {
+            margin: 0 auto;
+            
+        }
+    }
+  }
+}

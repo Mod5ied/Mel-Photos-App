@@ -2,19 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;1,300&display=swap"
-      rel="stylesheet" />
-    <link rel="stylesheet" href="main.css">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="main.css" />
+    <title>MelPhotos</title>
 </head>
 <body>
     <nav class="nav-area">
         <h1 id="header">MEL-PHOTOS</h1>
-        <div>
-            <input type="search" name="search-box" id="search">
-        </div>
+        <form>
+            <input type="search" id="search" placeholder="  Search Photos" />
+            <button type="submit">Search</button>
+        </form>
     </nav>
     <main>
 

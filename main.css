@@ -1,7 +1,9 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 1px solid red !important;
+  -webkit-box-ordinal-group: 2 !important;
+      -ms-flex-order: 1px solid red !important;
+          order: 1px solid red !important;
 }
 
 @media (max-width: 500px) {
@@ -13,6 +15,8 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    background: #e6e6e6;
+    font-family: "Rubik", sans-serif;
   }
   body .nav-area {
     display: -webkit-box;
@@ -26,9 +30,68 @@
   }
   body .nav-area #header {
     font-size: 1rem;
+    font-weight: 700;
+    color: #135bbf;
   }
   body .nav-area div {
     margin: 0 auto;
+  }
+  body .nav-area div input {
+    width: 12rem;
+    height: 2rem;
+    border: transparent;
+    border-radius: 0.3rem;
+    -webkit-box-shadow: 0 0.5rem 2rem -0.25rem rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0.5rem 2rem -0.25rem rgba(0, 0, 0, 0.3);
+    font-family: "Rubik", sans-serif;
+  }
+}
+
+@media (min-width: 1021px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: #e6e6e6;
+    font-family: "Rubik", sans-serif;
+  }
+  body .nav-area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 0 20rem;
+    border-left: 1px solid #b3b3b3;
+    border-right: 1px solid #b3b3b3;
+  }
+  body .nav-area #header {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #135bbf;
+  }
+  body .nav-area div {
+    margin: 0 auto;
+  }
+  body .nav-area div input {
+    width: 16rem;
+    height: 2rem;
+    border: transparent;
+    border-radius: 0.3rem;
+    -webkit-box-shadow: 0 0.5rem 2rem -0.25rem rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0.5rem 2rem -0.25rem rgba(0, 0, 0, 0.3);
+    font-family: "Rubik", sans-serif;
   }
 }
 /*# sourceMappingURL=main.css.map */

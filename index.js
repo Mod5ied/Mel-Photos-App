@@ -4,26 +4,23 @@ const form = document.querySelector("form");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  removeOldImages();
+  //removeOldImages();
   const searchTerm = input.value;
-  axios
-    .get(
-      "https://api.unsplash.com/search/photos/?query=${searchTerm}&orientation=squarish&client_id=qYv3cjnECpaACl6AVCaZVaDZMODyA42Kbp7TsYQ4Vbk"
+  axios.get(
+      'https://api.unsplash.com/search/photos/?query=${searchTerm}&orientation=squarish&client_id=qYv3cjnECpaACl6AVCaZVaDZMODyA42Kbp7TsYQ4Vbk'
     )
-    .then((response) => {
-      console.log(response);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+    .then(res => res.json)
+    .then(data => console.log(data))
 });
-
+/*
+//function to remove tags upon new search
 const removeOldImages = () => {
-    const images = document.querySelectorAll('a');
-    images.forEach((image)=>{
-        image.remove()
-    });
+  const images = document.querySelectorAll("a");
+  images.forEach((image) => {
+    image.remove();
+  });
 };
+
 
 const generateTags = (data) => {
   const images = data;
@@ -43,3 +40,4 @@ const generateTags = (data) => {
     document.body.appendChild(aTag);
   });
 };
+*/

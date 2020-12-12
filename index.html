@@ -3,23 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="./index.js" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <script src="./index.js"></script>
     <link rel="stylesheet" href="main.css" />
     <title>MelPhotos</title>
 </head>
 <body>
     <nav class="nav-area">
-        <h1 id="header">MEL-PHOTOS</h1>
-        <form>
-            <input type="search" id="search" placeholder="  Search Photos" />
-            <button type="submit">Search</button>
+        <div id="center">
+            <i class="fas fa-ellipsis-v" id="menu"></i>
+            <i class="fas fa-camera-retro" id="camera"></i>
+            <h1 id="header">Axios Photos</h1>
+        </div>
+        <form id="myForm">
+            <i class="fas fa-search"></i>
+            <input type="search" id="search" placeholder="    Search Photos" />
         </form>
     </nav>
-    <main>
-
-    </main>
+    
 </body>
 </html>

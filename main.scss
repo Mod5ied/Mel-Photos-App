@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
 @mixin flex($direction) {
   display: flex;
   flex-direction: $direction;
@@ -15,7 +14,6 @@
   box-sizing: border-box;
   overflow-x: hidden;
   order: 1px solid red !important;
-  
 }
 /*Media query for smartphones*/
 @media (max-width: 500px) {
@@ -42,7 +40,7 @@
           font-size: 1.2rem;
           color: hsl(0, 0%, 70%);
         }
-        #camera{
+        #camera {
           font-size: 2.5rem;
           color: hsla(0, 0%, 98%, 0.719);
         }
@@ -65,7 +63,7 @@
           padding: 10px 12px;
           pointer-events: none;
         }
-        
+
         input {
           width: 20rem;
           height: 3rem;
@@ -77,14 +75,14 @@
         }
         input:focus {
           outline: transparent;
-          box-shadow: 0 0.3rem .5rem 0.3rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0.3rem 0.5rem 0.3rem rgba(0, 0, 0, 0.3);
         }
         button {
           width: 20rem;
-          padding: .5rem;
+          padding: 0.5rem;
           border: transparent;
-          border-radius: .3rem;
-          background:#135bbf;
+          border-radius: 0.3rem;
+          background: #135bbf;
           color: white;
         }
         button:focus {
@@ -95,13 +93,19 @@
     }
     .main {
       background: hsla(0, 0%, 70%, 0.87);
-      
+
       .gallery-area {
         height: 20rem;
-        margin: .8rem;
-        border-radius: .4rem;
+        margin: 0.8rem;
+        border-radius: 0.4rem;
         background: hsl(0, 0%, 97%);
-        box-shadow: 0 .3rem .6rem 0 rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0.3rem 0.6rem 0 rgba(0, 0, 0, 0.3);
+
+        h2 {
+          padding: 0 1rem;
+          font-size: 1rem;
+          color: #135bbf;
+        }
       }
     }
   }
@@ -116,7 +120,6 @@
     background: transparent;
     z-index: 1;
   }*/
-  
 }
 
 //Media query for desktop
@@ -130,22 +133,22 @@
     .nav-area {
       @include flex(row);
       @include row(center);
-      background  : #052552;
+      background: #052552;
       gap: 13rem;
       /*padding: 1rem;
       margin: 0 20rem;*/
-     
+
       #center {
         @include flex(row);
         @include col(center);
-        gap: .5rem;
-        
+        gap: 0.5rem;
+
         #menu {
           display: none;
         }
         #camera {
-          font-size: 1.4rem;
-          background: hsla(0, 0%, 98%, 0.788);
+          font-size: 1.7rem;
+          color: hsla(0, 0%, 98%, 0.788);
           overflow: hidden;
         }
         #header {
@@ -176,11 +179,29 @@
         input:focus,
         :hover {
           outline: transparent;
-          box-shadow: 0 .2rem .3rem 0  rgba(190, 189, 189, 0.3);
+          box-shadow: 0 0.2rem 0.3rem 0 rgba(190, 189, 189, 0.3);
           background: hsla(0, 0%, 98%, 0.932);
         }
       }
     }
-    
+    .main {
+      background: hsl(0, 0%, 89%);
+      box-sizing: border-box;
+
+      .gallery-area {
+        height: 50rem;
+        margin: 0 10.5rem;
+        background: hsl(0, 0%, 95%);
+        border-left: 2px solid hsla(0, 0%, 7%, 0.349);
+        border-right: 2px solid hsla(0, 0%, 7%, 0.349);
+        /*box-shadow: 0 .3rem .4rem 0 rgba(0, 0, 0, 0.3);*/
+
+        h2 {
+          padding: 0 2rem;
+          font-size: 1rem;
+          color: #135bbf;
+        }
+      }
+    }
   }
 }

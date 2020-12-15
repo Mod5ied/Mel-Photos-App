@@ -123,35 +123,64 @@
 @media (min-width: 1021px) {
   body {
     @include flex(column);
-    background: hsl(0, 0%, 90%);
     font-family: "Rubik", sans-serif;
+    margin: 0;
+    padding: 0;
 
     .nav-area {
       @include flex(row);
-      @include col(center);
-      gap: 1rem;
-      padding: 1rem;
-      margin: 0 20rem;
-      border-left: 1px solid hsl(0, 0%, 70%);
-      border-right: 1px solid hsl(0, 0%, 70%);
-
-      #header {
-        font-size: 1rem;
-        font-weight: 700;
-        color: #135bbf;
+      @include row(center);
+      background  : #052552;
+      gap: 13rem;
+      /*padding: 1rem;
+      margin: 0 20rem;*/
+     
+      #center {
+        @include flex(row);
+        @include col(center);
+        gap: .5rem;
+        
+        #menu {
+          display: none;
+        }
+        #camera {
+          font-size: 1.4rem;
+          background: hsla(0, 0%, 98%, 0.788);
+          overflow: hidden;
+        }
+        #header {
+          font-size: 1.8rem;
+          font-weight: 700;
+          color: hsl(0, 0%, 97%);
+        }
       }
       form {
-        margin: 0 auto;
+        @include flex(row);
+        @include col(center);
 
+        .fas {
+          position: absolute;
+          margin-left: 13rem;
+          padding: 10px 12px;
+          pointer-events: none;
+        }
         input {
           width: 16rem;
           height: 2rem;
-          border: transparent;
-          border-radius: 0.3rem;
+          border: none;
+          border-radius: 1rem;
+          background: hsl(0, 0%, 99%);
           box-shadow: 0 0.5rem 2rem -0.25rem rgba(0, 0, 0, 0.3);
           font-family: "Rubik", sans-serif;
         }
+        input:focus,
+        :hover {
+          outline: transparent;
+          box-shadow: 0 .2rem .3rem 0  rgba(190, 189, 189, 0.3);
+          background: hsla(0, 0%, 98%, 0.932);
+        }
       }
     }
+    
   }
 }

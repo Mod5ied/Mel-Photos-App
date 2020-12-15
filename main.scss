@@ -17,16 +17,17 @@
   order: 1px solid red !important;
   
 }
+/*Media query for smartphones*/
 @media (max-width: 500px) {
   body {
     @include flex(column);
-    height: 100vh;
-    background: #052552;
-    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
     font-family: "Rubik", sans-serif;
 
     .nav-area {
       @include flex(column);
+      background: #052552;
       padding: 13rem 0;
 
       #center {
@@ -92,17 +93,30 @@
         }
       }
     }
+    .main {
+      background: hsla(0, 0%, 70%, 0.87);
+      
+      .gallery-area {
+        height: 20rem;
+        margin: .8rem;
+        border-radius: .4rem;
+        background: hsl(0, 0%, 97%);
+        box-shadow: 0 .3rem .6rem 0 rgba(0, 0, 0, 0.3);
+      }
+    }
   }
-  body::after {
+
+  /*body::after {
     content: "";
     position: absolute;
     left: 0;
     right: 0;
     top: 70%;
     bottom: -5%;
-    background: hsl(0, 1%, 72%);
+    background: transparent;
     z-index: 1;
-  }
+  }*/
+  
 }
 
 //Media query for desktop

@@ -9,12 +9,15 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="main.css" />
     <title>MelPhotos</title>
   </head>
   <body>
-    <nav class="nav-area" id="vueapp">
+    <nav class="nav-area">
       <div id="center">
         <!--i class="fas fa-ellipsis-v" id="menu"></--i-->
         <i class="fas fa-camera-retro" id="camera"></i>
@@ -23,7 +26,6 @@
           <i class="fas fa-search"></i>
           <input
             type="text"
-            v-on:click.enter="fetchImages"
             id="search"
             ref="input"
             placeholder="Search for photo"
@@ -31,9 +33,8 @@
         </form>
       </div>
     </nav>
-    <h2>Check out <i class="fas fa-sort-down"></i></h2>
-    <main class="main">
-    </main>
-    <script src="./main.js"></script>
+    <h2 id="header2">Check out <i class="fas fa-sort-down"></i></h2>
+    <main id="main"></main>
+    <script src="./index.js"></script>
   </body>
 </html>

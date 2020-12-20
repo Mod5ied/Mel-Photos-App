@@ -21,26 +21,29 @@ input.addEventListener("keyup", (e) => {
 const generateTags = (data) => {
   const images = data;
   images.forEach((image) => {
+    
     //create link tag
     const aTag = document.createElement("a");
     aTag.href = image.links.html;
     aTag.target = "_blank";
+    aTag.id = "linkRes"
 
     //create image tag
     const imgTag = document.createElement("img");
     imgTag.src = image.urls.regular;
     imgTag.alt = image.alt_description;
+    imgTag.id = "imageRes"
 
-    //appending
     aTag.appendChild(imgTag);
-    document.body.appendChild(aTag);
+    //We append the image results to the main section of our page
+    document.getElementById("main").appendChild(aTag);
   });
 };
-/*
+
 //function to remove tags upon new search
 const removeOldImages = () => {
   const images = document.querySelectorAll("a");
   images.forEach((image) => {
     image.remove();
   });
-};*/
+};

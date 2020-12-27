@@ -21,18 +21,17 @@ input.addEventListener("keyup", (e) => {
 const generateTags = (data) => {
   const images = data;
   images.forEach((image) => {
-    
     //create link tag
     const aTag = document.createElement("a");
     aTag.href = image.links.html;
     aTag.target = "_blank";
-    aTag.id = "linkRes"
+    aTag.id = "linkRes"; //This would be used for our styling in css
 
     //create image tag
     const imgTag = document.createElement("img");
     imgTag.src = image.urls.regular;
     imgTag.alt = image.alt_description;
-    imgTag.id = "imageRes"
+    imgTag.id = "imageRes"; //This would be used for our styling in css
 
     aTag.appendChild(imgTag);
     //We append the image results to the main section of our page

@@ -4,6 +4,7 @@ const accessKey = `hV32rTvyumuVXBlHIJ4SchuzraqM1pjx8oWjab8bIF8`;
 
 //Add an event listener to the input element
 input.addEventListener("keyup", (e) => {
+  removeOldImages();
   //we source the user input into a constant and console it
   const searchString = e.target.value;
   console.log(searchString);

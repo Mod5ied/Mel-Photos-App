@@ -208,7 +208,7 @@
   }
   body #center form .fas {
     position: absolute;
-    left: 8rem;
+    left: 5rem;
     padding: 0.5rem;
     color: rgba(77, 77, 77, 0.479);
     pointer-events: none;

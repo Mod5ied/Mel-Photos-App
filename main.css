@@ -2,9 +2,12 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow-x: hidden;
-  border: 1px solid red !important;
+  -webkit-box-ordinal-group: 2 !important;
+      -ms-flex-order: 1px solid red !important;
+          order: 1px solid red !important;
 }
 
+/*THERE'S JUST NO WAY YOU'RE EXPECTING THAT I MAKE A MEDIA QUERY FOR iPhone4 & 5*/
 /*Media query for smartphones*/
 @media (max-width: 380px) {
   body {
@@ -111,20 +114,29 @@
     font-size: larger;
   }
   body #main {
+    margin: 0;
+    padding: .3rem;
+    overflow-y: hidden;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    gap: .4rem;
-    height: 100vh;
-    padding: .4rem 1.5rem;
-    background: #1a1a1a;
+    gap: .8rem;
+    background: rgba(23, 8, 18, 0.89);
+  }
+  body a img {
+    width: 22rem;
+    height: 25rem;
+    border-radius: 0.3rem;
   }
 }
 
@@ -230,6 +242,31 @@
     color: #7e0a51;
     font-size: larger;
   }
+  body #main {
+    margin: 0;
+    padding: .3rem;
+    overflow-y: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: .8rem;
+    background: rgba(23, 8, 18, 0.89);
+  }
+  body #main a img {
+    width: 22rem;
+    height: 25rem;
+    border-radius: 0.3rem;
+  }
 }
 
 /*Media query for tablets and iPads*/
@@ -304,13 +341,13 @@
   }
   body #center form .fas {
     position: absolute;
-    left: 15rem;
+    left: 14rem;
     padding: 0.5rem;
     color: rgba(77, 77, 77, 0.712);
     pointer-events: none;
   }
   body #center form input {
-    width: 20rem;
+    width: 22rem;
     height: 3rem;
     padding: 0 3rem;
     border: transparent;
@@ -338,8 +375,34 @@
     color: #7e0a51;
     font-size: larger;
   }
+  body #main {
+    margin: 0;
+    padding: .3rem;
+    overflow-y: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: .88rem;
+    background: rgba(23, 8, 18, 0.89);
+  }
+  body a img {
+    width: 22rem;
+    height: 25rem;
+    border-radius: 0.3rem;
+  }
 }
 
+/*Media query for desktop & iPad pros */
 @media (min-width: 1021px) {
   body {
     display: -webkit-box;
@@ -353,7 +416,6 @@
     margin: 0;
     padding: 0;
     background: #d9d9d9;
-    /* Style image tags and links added using JavaScript*/
   }
   body .nav-area {
     display: -webkit-box;
@@ -443,10 +505,26 @@
     color: #7e0a51;
     font-size: larger;
   }
-  body a img {
-    width: 300px;
-    height: 400px;
-    border-radius: 0.5rem;
+  body #main {
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: .8rem;
+  }
+  body #main a img {
+    width: 22rem;
+    height: 25rem;
+    border-radius: 0.3rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -11,8 +11,10 @@
 * {
   box-sizing: border-box;
   overflow-x: hidden;
-  border: 1px solid red !important;
+  order: 1px solid red !important;
 }
+/*THERE'S JUST NO WAY YOU'RE EXPECTING THAT I MAKE A MEDIA QUERY FOR iPhone4 & 5*/
+
 /*Media query for smartphones*/
 @media (max-width: 380px) {
   body {
@@ -95,16 +97,24 @@
         font-size: larger;
       }
     }
-
+    //Style the Main section part of our template
     #main {
-      @include flex(column);
-      @include row(center);
-      gap: .4rem;
-      height: 100vh;
-      padding: .4rem 1.5rem;
-      background: #1a1a1a;
-      
-      
+      margin: 0;
+      padding: .3rem;
+      overflow-y: hidden;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      gap: .8rem;
+      background: hsla(319, 50%, 6%, 0.89);
+    }
+
+    //Style image tags and links added using JavaScript
+    a img {
+      width: 22rem;
+      height: 25rem;
+      border-radius: 0.3rem;
     }
 
   }
@@ -184,6 +194,26 @@
         font-size: larger;
       }
     }
+    //Style the Main section part of our template
+    #main {
+      margin: 0;
+      padding: .3rem;
+      overflow-y: hidden;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      gap: .8rem;
+      background: hsla(319, 50%, 6%, 0.89);
+      
+      //Style image tags and links added using JavaScript
+      a img {
+        width: 22rem;
+        height: 25rem;
+        border-radius: 0.3rem;
+      }
+    }
+
   }
 }
 /*Media query for tablets and iPads*/
@@ -228,14 +258,14 @@
 
         .fas {
           position: absolute;
-          left: 15rem;
+          left: 14rem;
           padding: 0.5rem;
           color: hsla(0, 0%, 30%, 0.712);
           pointer-events: none;
         }
 
         input {
-          width: 20rem;
+          width: 22rem;
           height: 3rem;
           padding: 0 3rem;
           border: transparent;
@@ -265,9 +295,28 @@
         font-size: larger;
       }
     }
+    //Style the Main section part of our template
+    #main {
+      margin: 0;
+      padding: .3rem;
+      overflow-y: hidden;
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: center;
+      gap: .88rem;
+      background: hsla(319, 50%, 6%, 0.89);
+    }
+
+    //Style image tags and links added using JavaScript
+    a img {
+      width: 22rem;
+      height: 25rem;
+      border-radius: 0.3rem;
+    }
   }
 }
-//Media query for desktop
+/*Media query for desktop & iPad pros */
 @media (min-width: 1021px) {
   body {
     @include flex(column);
@@ -343,11 +392,22 @@
         font-size: larger;
       }
     }
-    /* Style image tags and links added using JavaScript*/
-    a img {
-      width: 300px;
-      height: 400px;
-      border-radius: 0.5rem;
+    //Style the Main section part of our template
+    #main {
+      margin: 0;
+      padding: 0;
+      overflow-y: hidden;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      gap: .8rem;
+      
+      //Style image tags and links added using JavaScript
+      a img {
+        width: 22rem;
+        height: 25rem;
+        border-radius: 0.3rem;
+      }
     }
   }
 }
